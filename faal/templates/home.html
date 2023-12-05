@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فال حافظ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url({% static 'images/grayPattern-small.png' %}); background-repeat:repeat ">
+  <header>
+    <h1>فال حافظ</h1>
+    <img src="images/hafez.jpg" alt="عکس حافظ" width="150">
+  </header>
+  <main>
+    <div class="container">
+      <form action="get-faal.php" method="post">
+        <input type="text" name="niyet" placeholder="نیت خود را بنویسید">
+        <input type="submit" value="فال بگیر">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>با احترام به حافظ شیرازی</p>
+  </footer>
+</body>
+</html>
