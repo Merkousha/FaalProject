@@ -16,7 +16,7 @@ def get_faal(request):
     faal_object = {
         'title': faal_data['title'],
         'full_title': faal_data['fullTitle'],
-        'html_text': faal_data['htmlText'],
+        'html_text': faal_data['plainText'].replace('\r\n','<br/>'),
         'mp3_url': faal_data['recitations'][0]['mp3Url'],  # Assuming you want the first recitation
     }
 
