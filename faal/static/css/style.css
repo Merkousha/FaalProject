@@ -16,6 +16,7 @@
 }
 
 .page_holder{
-    background-image: url('/static/images/main-bg.png');
-    background-size: cover;
+    /* background-image: url('/static/images/main-bg.png');
+    background-size: cover; */
+    height: 90vh;
 }
