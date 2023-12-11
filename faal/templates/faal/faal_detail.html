@@ -7,20 +7,19 @@
 
 {% block content %}
 
-  <div style=>
+<div class="content ">
         <h5>{{ faal.full_title }}</h5>
         <hr/>
       <p class="poem"> 
         {{ faal.html_text | safe }}
-    
-    
-    </p>
-    <div>
+        </p>
+</div>
+    <img src="/static/images/bolbols.png" alt="Faal Hafez" class="float-end bolbols"/>
+    <div class="sticky-footer">
         <audio controls>
             <source src="{{ faal.mp3_url }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
     
-  </div>
 {% endblock content %}

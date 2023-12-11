@@ -16,7 +16,29 @@
 }
 
 .page_holder{
-    /* background-image: url('/static/images/main-bg.png');
-    background-size: cover; */
+    background-color: white;
+    background-image: url('/static/images/golobolbol.png');
+    background-size:auto; 
+    background-repeat: no-repeat; 
+    background-position: center left; /* Set the background position to top */
     height: 90vh;
+    flex: 1; /* This makes the container expand to fill the available space */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Clear the float */
 }
+
+.content {
+    flex: 1; /* This makes the content take up remaining space in the container */
+  }
+.sticky-footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    text-align: center;
+  }
+
+  .bolbols {
+    height: auto;
+    max-width: 100px;
+    top: 40vh;
+    position: absolute;
+  }
