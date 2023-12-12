@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from translate import Translator
 import requests
 from .models import Faal
 import random
