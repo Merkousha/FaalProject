@@ -17,19 +17,26 @@
 
 .page_holder{
     background-color: white;
-    background-image: url('/static/images/golobolbol.png');
+    background-image: url('/static/images/golobolbol-fade.png');
     background-size:auto; 
     background-repeat: no-repeat; 
     background-position: center left; /* Set the background position to top */
-    height: 90vh;
+    min-height: 90vh;
     flex: 1; /* This makes the container expand to fill the available space */
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Clear the float */
+    margin-bottom: 100px;
 }
 
+.txt-justify{
+
+  text-align: justify;
+}
 .content {
     flex: 1; /* This makes the content take up remaining space in the container */
+    text-align: center;
+    
   }
 .sticky-footer {
     margin-top: auto; /* Pushes the footer to the bottom */
@@ -41,4 +48,26 @@
     max-width: 100px;
     top: 40vh;
     position: absolute;
+    opacity: 0.5;
   }
+
+  .faal_box {
+
+
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .page_holder{
+      background-color: white;
+      background-image: url('/static/images/golobolbol-fade.png');
+      background-size:auto; 
+      background-repeat: no-repeat; 
+      background-position: center left; /* Set the background position to top */
+      min-height: 90vh;
+      flex: 1; /* This makes the container expand to fill the available space */
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; /* Clear the float */
+  }
+}

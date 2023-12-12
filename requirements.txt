@@ -1,1 +1,2 @@
-pip install translate
+Django==4.1.7
+bs4

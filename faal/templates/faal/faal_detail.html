@@ -1,25 +1,53 @@
 {% extends 'share/base.html' %}
-
 {% load static %}
 {% block title %}
- {{ faal.title }} 
+    غزل{{ faal.title }}
 {% endblock title %}
-
 {% block content %}
-
-<div class="content ">
-        <h5>{{ faal.full_title }}</h5>
-        <hr/>
-      <p class="poem"> 
-        {{ faal.html_text | safe }}
-        </p>
-</div>
-    <img src="/static/images/bolbols.png" alt="Faal Hafez" class="float-end bolbols"/>
-    <div class="sticky-footer">
-        <audio controls>
-            <source src="{{ faal.mp3_url }}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <div class="content ">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="faal_box col-md-8 col-sm-12">
+                <img src="{% static 'images/hafezSays.png' %}" class="img-fluid"/>
+                {{ faal.full_text |linebreaks }}
+                <audio id="myAudio" controls autoplay>
+                    <source src="{{ faal.mp3_url }}" type="audio/mpeg"  />
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <p class="poem"></p>
     </div>
-    
+    <img src="/static/images/bolbols.png"
+         alt="Faal Hafez"
+         class="float-end bolbols" />
+    <div class="sticky-footer">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="faal_box col-md-8 col-sm-12">
+                <img src="{% static 'images/faalIs.png' %}" class="img-fluid" />
+                <br/>
+                {{ faal.faal_text }}
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 text-center">
+              <a href="{% url 'get_faal'%}">
+              <img src="{% static 'images/getFallAgain.png'%}" alt="گرفتن فال از دیوان حافظ" class="img-fluid" />
+              </a>
+            </div>
+            <div class="col-4">
+            </div>
+          </div>
+    </div>
+    <script>
+        // JavaScript to play the audio after a user action
+        document.getElementById('myAudio').addEventListener('click', function() {
+            this.play();
+        });
+    </script>
 {% endblock content %}
